@@ -6,8 +6,10 @@ import DevTools from './DevTools';
 
 render(
     <Provider store={store}>
-        
-       <DevTools />
+      <div>
+        <h1>test</h1>        
+        <DevTools />
+      </div>
     </Provider>,
     document.getElementById('root')
 );
