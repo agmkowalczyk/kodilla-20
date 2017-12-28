@@ -3,11 +3,16 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store/index';
 import DevTools from './DevTools';
+import { Router, hashHistory } from 'react-router';
+import routes from './routes';
+import './country.css';
 
 render(
     <Provider store={store}>
-        
-       <DevTools />
+      <div>
+        <Router history={hashHistory} routes={routes} />
+        <DevTools />
+      </div>
     </Provider>,
     document.getElementById('root')
 );
